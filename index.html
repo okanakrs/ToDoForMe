@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'">
+  <title>ToDoForMe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <div class="brand">&gt; todo_</div>
+    <ul id="projects"></ul>
+    <button id="add-project">+ klasör ekle</button>
+  </aside>
+  <main id="main">
+    <div id="empty">Soldan bir proje klasörü seç ya da ekle.</div>
+    <section id="view" hidden>
+      <header>
+        <h1 id="project-name"></h1>
+        <div id="project-path"></div>
+      </header>
+      <div id="filters"></div>
+      <form id="add-form" autocomplete="off">
+        <input id="new-text" placeholder="Ne yapılacak?" required>
+        <div class="add-row">
+          <div id="cat-chips"></div>
+          <div class="new-cat-wrap">
+            <input id="new-cat" placeholder="yeni kategori">
+            <button type="button" id="add-cat" title="kategoriyi ekle (birden fazla seçebilirsin)">+</button>
+          </div>
+          <button type="submit" id="add-btn">Ekle ↵</button>
+        </div>
+      </form>
+      <ul id="todos"></ul>
+      <footer id="stats"></footer>
+    </section>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>
